@@ -24,3 +24,9 @@ git checkout main // 기본 브랜치가 main인 경우
 git checkout -b 브랜치이름
 ex) git checkout -b apply-feedback
 ```
+
+## TODO
+
+- [ ] 차량 추상화 
+- [ ] 차량 목록 관리
+- [ ] 차량 연료 보고서 생성

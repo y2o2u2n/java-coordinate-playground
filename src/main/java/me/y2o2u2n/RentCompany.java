@@ -2,10 +2,10 @@ package me.y2o2u2n;
 
 public class RentCompany {
 	public static RentCompany create() {
-		return null;
+		return new RentCompany();
 	}
 
-	public void addCar(Object object) {
+	public void addCar(Car car) {
 
 	}
 

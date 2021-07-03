@@ -28,5 +28,5 @@ ex) git checkout -b apply-feedback
 ## TODO
 
 - [x] 차량 추상화 
-- [ ] 차량 목록 관리
+- [x] 차량 목록 관리
 - [ ] 차량 연료 보고서 생성

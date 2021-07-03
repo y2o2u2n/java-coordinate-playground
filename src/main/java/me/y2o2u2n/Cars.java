@@ -13,4 +13,16 @@ public class Cars {
 	public void add(Car car) {
 		this.cars.add(car);
 	}
+
+	public String generateReport() {
+		StringBuilder sb = new StringBuilder();
+
+		for (Car car : this.cars) {
+			String report = car.generateReport();
+			sb.append(report);
+			sb.append(System.getProperty("line.separator"));
+		}
+
+		return sb.toString();
+	}
 }

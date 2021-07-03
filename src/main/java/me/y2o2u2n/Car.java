@@ -22,4 +22,8 @@ public abstract class Car {
 	double getChargeQuantity() {
 		return getTripDistance() / getDistancePerLiter();
 	}
+
+	String generateReport() {
+		return String.format("%s : %d리터", getName(), (int)getChargeQuantity());
+	}
 }

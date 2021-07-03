@@ -16,6 +16,6 @@ public class RentCompany {
 	}
 
 	public String generateReport() {
-		return null;
+		return cars.generateReport();
 	}
 }

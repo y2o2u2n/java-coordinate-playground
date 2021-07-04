@@ -1,0 +1,9 @@
+package me.y2o2u2n;
+
+import java.util.List;
+
+public class FigureFactory {
+	public static Figure getInstance(List<Point> points) {
+		return null;
+	}
+}

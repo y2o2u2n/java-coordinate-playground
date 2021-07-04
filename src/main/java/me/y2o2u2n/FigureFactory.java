@@ -14,6 +14,10 @@ public class FigureFactory {
 			return Rectangle.of(points);
 		}
 
-		return null;
+		if (pointCount == Triangle.POINT_COUNT) {
+			return Triangle.of(points);
+		}
+
+		throw new UnsupportedOperationException();
 	}
 }

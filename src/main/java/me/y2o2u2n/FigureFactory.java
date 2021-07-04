@@ -4,6 +4,12 @@ import java.util.List;
 
 public class FigureFactory {
 	public static Figure getInstance(List<Point> points) {
+		int pointCount = points.size();
+
+		if (pointCount == Line.POINT_COUNT) {
+			return Line.of(points);
+		}
+
 		return null;
 	}
 }

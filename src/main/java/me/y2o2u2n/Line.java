@@ -15,16 +15,16 @@ public class Line extends AbstractFigure {
 		this.b = b;
 	}
 
+	public Line(List<Point> points) {
+		this(points.get(0), points.get(1));
+	}
+
 	public static Line of(Point a, Point b) {
 		return new Line(a, b);
 	}
 
-	public static Line of(List<Point> points) {
-		if (points.size() != POINT_COUNT) {
-			throw new IllegalArgumentException();
-		}
-
-		return Line.of(points.get(0), points.get(1));
+	public double length() {
+		return Math.sqrt(Math.pow(a.getX() - b.getX(), 2) + Math.pow(a.getY() - b.getY(), 2));
 	}
 
 	@Override
@@ -50,9 +50,5 @@ public class Line extends AbstractFigure {
 	@Override
 	public int hashCode() {
 		return Objects.hash(a, b);
-	}
-
-	public double length() {
-		return Math.sqrt(Math.pow(a.getX() - b.getX(), 2) + Math.pow(a.getY() - b.getY(), 2));
 	}
 }

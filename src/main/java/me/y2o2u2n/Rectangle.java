@@ -25,30 +25,12 @@ public class Rectangle extends AreaFigure {
 		this.d = d;
 	}
 
+	public Rectangle(List<Point> points) {
+		this(points.get(0), points.get(1), points.get(2), points.get(3));
+	}
+
 	public static Rectangle of(Point a, Point b, Point c, Point d) {
 		return new Rectangle(a, b, c, d);
-	}
-
-	public static Rectangle of(List<Point> points) {
-		if (points.size() != POINT_COUNT) {
-			throw new IllegalArgumentException();
-		}
-
-		return Rectangle.of(
-			points.get(0),
-			points.get(1),
-			points.get(2),
-			points.get(3));
-	}
-
-	@Override
-	public String getName() {
-		return NAME;
-	}
-
-	@Override
-	public int getPointCount() {
-		return POINT_COUNT;
 	}
 
 	@Override
@@ -77,6 +59,16 @@ public class Rectangle extends AreaFigure {
 	private int calculateDifference(Set<Integer> valuesOfPoints) {
 		List<Integer> values = new ArrayList<>(valuesOfPoints);
 		return Math.abs(values.get(0) - values.get(1));
+	}
+
+	@Override
+	public String getName() {
+		return NAME;
+	}
+
+	@Override
+	public int getPointCount() {
+		return POINT_COUNT;
 	}
 
 	@Override

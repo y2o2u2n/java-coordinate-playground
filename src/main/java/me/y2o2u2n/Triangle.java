@@ -17,19 +17,12 @@ public class Triangle extends AreaFigure {
 		this.c = c;
 	}
 
-	public static Triangle of(Point a, Point b, Point c) {
-		return new Triangle(a, b, c);
+	public Triangle(List<Point> points) {
+		this(points.get(0), points.get(1), points.get(2));
 	}
 
-	public static Triangle of(List<Point> points) {
-		if (points.size() != POINT_COUNT) {
-			throw new IllegalArgumentException();
-		}
-
-		return Triangle.of(
-			points.get(0),
-			points.get(1),
-			points.get(2));
+	public static Triangle of(Point a, Point b, Point c) {
+		return new Triangle(a, b, c);
 	}
 
 	@Override

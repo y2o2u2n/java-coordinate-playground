@@ -10,6 +10,10 @@ public class FigureFactory {
 			return Line.of(points);
 		}
 
+		if (pointCount == Rectangle.POINT_COUNT) {
+			return Rectangle.of(points);
+		}
+
 		return null;
 	}
 }

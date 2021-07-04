@@ -20,4 +20,18 @@ class FigureFactoryTest {
 		assertThat(figure).isInstanceOf(Line.class);
 		assertThat(figure.getName()).isEqualTo("선");
 	}
+
+	@Test
+	public void rectangle() {
+		List<Point> points = Arrays.asList(
+			Point.of(1, 1),
+			Point.of(4, 1),
+			Point.of(1, 4),
+			Point.of(4, 4));
+
+		Figure figure = FigureFactory.getInstance(points);
+		assertThat(figure).isNotNull();
+		assertThat(figure).isInstanceOfAny(Rectangle.class);
+		assertThat(figure.getName()).isEqualTo("사각형");
+	}
 }
